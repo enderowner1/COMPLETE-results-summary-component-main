@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family:"Hanken Grotesk";
+}
+
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+    margin: 0;
+  padding: 0;
+  
+}
+
+/* dark mode user-agent-styles */
+html, body {
+ 
+  
+  height: 100vh;
+  
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.all{
+    
+    height: 100vh;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+
+}
+
+
+
+.results-card{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+background-color:darkgoldenrod;
+margin:0rem;
+padding: 1.75rem;
+height: 75%;
+gap: .5rem;
+background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+border-bottom-left-radius: 30px;
+border-bottom-right-radius: 30px;
+max-width: 475px;
+}
+
+.summary-card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    background-color:white ;
+    margin:0rem;
+    padding: 1.75rem;
+    height: 100%;
+    max-width: 475px;
+    
+}
+
+.results-card *{
+    text-align: center;
+}
+
+.circle{
+    display: flex;
+    flex-direction: column;
+    border-radius: 100%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    margin: 1rem;
+    padding: 1.5rem;
+    aspect-ratio: 1/1;
+}
+/* .circle-text{
+
+} */
+
+.result{
+    font-weight: 500;
+    font-size: .95rem;
+    color: hsl(241, 100%, 89%);
+}
+
+h1{
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: hsl(221, 100%, 96%);
+}
+
+h2{
+    font-weight:500 ;
+    font-size: 1rem;
+    color: hsl(241, 100%, 89%,40%);
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:hsl(221, 100%, 96%) ; 
+}
+
+h4{
+    font-weight: 500;
+    font-size: .95rem;
+    color: hsl(241, 100%, 89%, 70%);
+}
+h5{
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+.color-boxes{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+}
+.color-boxes > div{
+    padding: .9rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    flex-wrap: nowrap;
+}
+
+.reaction-box{
+    background-color: hsl(0, 100%, 67%, 10%);
+}
+
+/* .reaction-box > div{
+    display: flex; 
+} */
+
+.color-boxes *{
+    display: flex; 
+    gap: .5em;
+}
+
+
+
+/* .left-reaction{
+    
+} */
+
+.memory-box{
+    background-color: hsl(39, 100%, 56%, 10%);
+
+}
+
+.verbal-box{
+    background-color: hsl(166, 100%, 37%, 10%);
+
+}
+
+.visual-box{
+    background-color: hsl(234, 85%, 45%, 10%);
+
+}
+
+h6{
+    font-size: .9rem;
+    white-space: nowrap;
+}
+.outof{
+    color: gray;
+}
+
+.red-text{
+    color:hsl(0, 100%, 67%) ;
+    font-weight: 500;
+}
+.yellow-text{
+    color:hsl(39, 100%, 56%) ;
+    font-weight: 500;
+}
+.green-text{
+    color:hsl(166, 100%, 37%) ;
+    font-weight: 500;
+}
+.blue-text{
+    color:hsl(234, 85%, 45%) ;
+    font-weight: 500;
+}
+
+.continue-button{
+    justify-content: center;
+    color:white;
+    background-color:hsl(224, 30%, 27%)  ;
+    padding: .95rem;
+    border-radius: 30px;
+}
+
+.continue-button:hover{
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+
+@media (width > 375px){
+    .content{
+        flex-direction: row;
+        max-height: 510px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .content > div{
+        height: 100%;
+        border-radius: 20px;
+    }
+    .circle{
+        padding: 2rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    .continue-button{
+        margin-top: 2rem;
+    }
+    .color-boxes{
+        margin-top: 0rem;
+    }
+    h5{
+        font-size: 1.4rem;
+        padding-bottom: 1.8rem;
+    }
+    .summary-card{
+        padding: 2rem;
+        border-bottom-right-radius:10px ;
+    }
+    .results-card{
+        justify-content: start;
+        padding: 2rem;
+    }
+    .color-boxes > div{
+        padding: .9rem;
+    }
+    .color-boxes > div {
+        margin-bottom: 1.rem;
+    }
+    .result{
+        padding: .75rem;
+        padding-top: 0;
+        font-size: 1.25rem;
+    }
+    h3{
+        padding:.5rem;
+        font-size: 1.75rem;
+        font-weight: 700;
+    }
+}
